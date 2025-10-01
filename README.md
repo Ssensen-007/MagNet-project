@@ -1,2 +1,2 @@
-# GMDC-project
-gmdc-project
+# MagNet-project
+MagNet-project
