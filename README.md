@@ -126,19 +126,19 @@ python train.py
 
 ### 4. Inference and Evaluation (Scoring) 
 
-1.  **Get Predictions and Labels:**
+*  **Get Predictions and Labels:**
     * The function first gets the model's raw output (`logits`) and uses `torch.argmax(logits[index], dim=1)` to determine the predicted class (`preds`).
     * At the same time, it retrieves the corresponding true labels (true) for that data subset (e.g., `test_idx`).
 
-2.  **Calculate with scikit-learn:**
+*  **Calculate with scikit-learn:**
     * This code uses the `f1_score` function from the `scikit-learn` library to perform the professional F1 score calculation.
     * `preds` (predictions) and `true` (true labels) are passed to the `f1_score` function.
 
-3.  **Macro-F1:**
+*  **Macro-F1:**
     * Calculated by setting `average='macro'`.。
     * **Calculation Process:** `scikit-learn` will independently calculate the F1 score for each class, and then compute the arithmetic mean of all class F1 scores. This metric treats all classes equally, regardless of whether a class has more or less data, making it very suitable for evaluating model performance on imbalanced datasets.
   
-4.  **Accuracy (ACC) :**
+*  **Accuracy (ACC) :**
     Process:
       * The function receives the model's raw scores (`logits`) and the true `labels` for a specific data split (e.g., `test_idx`).
       * It uses `torch.argmax(logits[index], dim=1)` to find the predicted class index (the one with the highest score) for each sample.
