@@ -12,7 +12,7 @@ MagNet is a novel framework designed to address the critical challenge of semant
 
 ## 核心贡献 (Core Contributions)
 
-1.  **Multi-view Graph Representation**: We construct a heterogeneous graph containing three views of information: lexical (word-word), syntactic (POS-POS), and factual (entity-entity). A `GCNEncoder` learns representations for each view.
+1.  **Multi-view Graph Representation**: We construct a heterogeneous graph containing three views of information: lexical (word), syntactic (POS), and factual (entity). A `GCNEncoder` learns representations for each view.
 2.  **Adaptive MoE Fusion**: We introduce a **Sparsely-gated Mixture of Experts (MoE) layer** (`MoEFeatureFusion`) to dynamically fuse the three view-specific document embeddings (`doc_word`, `doc_pos`, `doc_entity`). The gating network learns the optimal combination of experts for each individual text sample.
 3.  **Dual-Granularity Contrastive Learning**: To enhance the discriminative power of the fused representations, we apply a dual-contrastive loss:
     * **Fine-Grained Instance Alignment (FIA)**: Pulls augmented pairs of the same text closer.
