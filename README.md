@@ -15,8 +15,8 @@ MagNet is a novel framework designed to address the critical challenge of semant
 1.  **Multi-view Graph Representation**: We construct a heterogeneous graph containing three views of information: lexical (word-word), syntactic (POS-POS), and factual (entity-entity). A `GCNEncoder` learns representations for each view.
 2.  **Adaptive MoE Fusion**: We introduce a **Sparsely-gated Mixture of Experts (MoE) layer** (`MoEFeatureFusion`) to dynamically fuse the three view-specific document embeddings (`doc_word`, `doc_pos`, `doc_entity`). The gating network learns the optimal combination of experts for each individual text sample.
 3.  **Dual-Granularity Contrastive Learning**: To enhance the discriminative power of the fused representations, we apply a dual-contrastive loss:
-    * **Instance-level (ICL)**: Pulls augmented pairs of the same text closer.
-    * **Cluster-level (CCL)**: Enforces intra-cluster compactness based on generated pseudo-labels.
+    * **Fine-Grained Instance Alignment (FIA)**: Pulls augmented pairs of the same text closer.
+    * **Coarse-Grained Prototype Consistency (CPC)**: Enforces intra-cluster compactness based on generated pseudo-labels.
 4.  **End-to-End Optimization**: The contrastive losses are applied to the final MoE output, allowing the supervisory signal to backpropagate through and optimize the entire network—including the MoE gate and the GCN encoders.
 
 ## 模型架构 (Model Architecture)
@@ -48,7 +48,7 @@ MagNet 的数据流如下：
     * **分支 3 (正则):** `Sparse Gate` -> MoE Regularization Losses (Entropy & Balance).
 
 6.  **总损失 (Total Loss):**
-    * `Total Loss = CE Loss + Contrastive Loss + MoE Reg Loss`.
+    * `Total Loss = CE Loss + Contrastive Loss + MoE Loss`.
 
 ## 安装 (Installation)
 
