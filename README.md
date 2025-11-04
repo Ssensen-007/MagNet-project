@@ -139,10 +139,9 @@ python train.py
     * **Calculation Process:** `scikit-learn` will independently calculate the F1 score for each class, and then compute the arithmetic mean of all class F1 scores. This metric treats all classes equally, regardless of whether a class has more or less data, making it very suitable for evaluating model performance on imbalanced datasets.
   
 *  **Accuracy (ACC) :**
-    Process:
-      * The function receives the model's raw scores (`logits`) and the true `labels` for a specific data split (e.g., `test_idx`).
-      * It uses `torch.argmax(logits[index], dim=1)` to find the predicted class index (the one with the highest score) for each sample.
-      * It compares these predictions (`preds`) to the true `labels (labels[index])`.
-      * Score: The final score is `(Number of Correct Predictions) / (Total Number of Samples)`.
+    * The function receives the model's raw scores (`logits`) and the true `labels` for a specific data split (e.g., `test_idx`).
+    * It uses `torch.argmax(logits[index], dim=1)` to find the predicted class index (the one with the highest score) for each sample.
+    * It compares these predictions (`preds`) to the true `labels (labels[index])`.
+    * Score: The final score is `(Number of Correct Predictions) / (Total Number of Samples)`.
 
       
