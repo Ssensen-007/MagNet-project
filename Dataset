@@ -1,1 +1,12 @@
+**重要提示：** 由于 GitHub 限制大文件上传（超过 100MB），您不应将预处理好的数据文件（`.pkl`）或原始数据集上传到本仓库。您应该使用 `.gitignore` 文件来忽略它们。
 
+#### A. 数据集下载 (Download Datasets)
+
+您需要从以下公开来源下载本研究中使用的 6 个基准数据集。
+
+* **AG News:** [https://huggingface.co/datasets/ag_news](https://huggingface.co/datasets/ag_news)
+* **MR (Movie Review):** [https://www.cs.cornell.edu/people/pabo/movie-review-data/](https://www.cs.cornell.edu/people/pabo/movie-review-data/)
+* **Ohsumed:** (常用预处理版本) [https://github.com/yao8839836/text_gcn/tree/master/data/ohsumed](https://github.com/yao8839836/text_gcn/tree/master/data/ohsumed) (原始数据: [https://trec.nist.gov/data/t9_filtering.html](https://trec.nist.gov/data/t9_filtering.html))
+* **Twitter (Sentiment140):** [https://www.kaggle.com/datasets/kazanova/sentiment140](https://www.kaggle.com/datasets/kazanova/sentiment140)
+* **Snippets:** [http://www.phanxuanhieu.com/source-code/](http://www.phanxuanhieu.com/source-code/)
+* **TagMyNews:** [https://www.tagmynews.com/tagged_news_data.zip](https://www.tagmynews.com/tagged_news_data.zip)
