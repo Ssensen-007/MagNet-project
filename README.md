@@ -44,7 +44,7 @@ The data flow of MagNet is as follows:
 
 5.  **Multi-Task Output:**
     * **Branch 1 (Classification):** `doc_fea` -> Classifier -> `Logits` (for CE Loss).
-    * **Branch 2 (Contrast):** `doc_fea` -> Projection Head -> `Proj Fea` (for ICL Loss and CCL Loss).
+    * **Branch 2 (Contrast):** `doc_fea` -> Projection Head -> `Proj Fea` (for FIA Loss and CPC Loss).
     * **Branch 3 (Regularization):** `Sparse Gate` -> MoE Regularization Losses (Entropy & Balance).
 
 6.  **Total Loss:**
